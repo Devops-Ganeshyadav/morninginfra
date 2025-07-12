@@ -3,7 +3,15 @@ resource "azurerm_resource_group" "morning_rg" {
   location = var.location
 }
 
+resource "azurerm_resource_group" "evng_rg" {
+  name     = var.resource_group_name
+  location = var.location
+}
 
+resource "azurerm_resource_group" "kuchbhi_rg" {
+  name     = var.resource_group_name
+  location = var.location
+}
 
 resource "azurerm_storage_account" "morning_storage" {
     depends_on = [ azurerm_resource_group.morning_rg ]
